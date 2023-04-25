@@ -1,0 +1,65 @@
+ir no power shell
+
+Procurar o conteiner no docker hub e baixar https://hub.docker.com/
+
+    ou docker search django caso for usar apenas o terminal
+Ex:  docker pull django 
+
+
+Comandos:
+
+- docker ps  # para ver se tem algo rodando
+- docker images  # aparece as imagens que vc tem
+- Ao dar "Run", pode-se configurar o nome do container
+- Nos volumes pode-se colocar o "host path" e o "container path" que é a troca de conteúdo entre o container e o host
+
+cli  =  linha de comando
+
+# bash
+
+# apt update
+
+# cd /
+# cd zabbix/  # vai entrar no diretorio
+# touch arquivo.txt  # vai criar o arquivo no diretorio
+
+o Docker é responsável pela criação de containers
+o Kubernetes os gerencia em grande escala.
+
+
+Comandos básicos do Docker
+
+- docker run -it  # Roda o container docker e o '-it' deixa o container interativo
+- docker run -it centos /bin/bash  # ja inicia no root e esta dentro do container centos que utiliza so os seus proprios comandos do seu SO
+[root@68f65b803383]
+- Exit sai e volta pro seu so padrao e nao esta mais dentro daquele container
+
+- docker ps  # ve os containers nesta maquina que estao em execução
+- docker ps -a  # ve os containers mesmo nao em execução, lista todos
+
+- docker start "id c321cb23"  # Inicializa o container
+- docker ps  # como saber se o container realmente foi iniciado
+- docker attach "id c321cb23"  # Entra dentro do container
+- docker rm "id c321cb23"  # deleta o container
+
+
+- docker-compose = comunicação, comunicação entre dois containers,
+um container para cada processo conectados entre si, por ex, um container para python e django e um para mysql
+docker-compose vai criar uma rede para os containers e todos os containers que precisar para aquela aplicação geral funcionar, eles estarão conectados entre si
+- docker-compose.yml = instruções de comandos e versoes para rodar o container e a aplicação
+
+
+# Comandos para o teminal:
+
+-> docker -v  =  Versão do docker
+-> docker images  =  Mostra as imagens que tenho
+-> docker pull ubuntu  =  Baixa a ultima versão do ubuntu por exemplo
+-> docker search ubuntu  =  Vai pesquisar tds as imagens de ubuntu que ele tem
+-> docker container run -it debian bash  =  roda o container debian | 
+-> docker container list  =  lista os containers ativos
+-> docker container list -a  =  lista todos os containers ja executados
+
+
+
+
+
