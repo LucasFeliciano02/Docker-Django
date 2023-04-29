@@ -1,0 +1,32 @@
+- Containers:
+    Local onde vc tem uma base de codigo e essa base de codigo vai poder rodar de forma igualitaria independente do ambiente computacional
+
+- docker run <imagem>
+
+
+- docker ps  =  ve os containers rodando na maquina
+- docker ps -a  =  ve tds containers que ja rodaram na maquina
+ 
+ 
+- docker run nginx  =  servidor web que epoe a porta 80
+- docker run -p 8080:80 nginx  =  acessa a porta de dentro do meu container, tem que compartilhar a porta
+    quando o docker rodar, todas vezes que a porta 8080 forr acessada do computador pessoal, no meu browser, eu vou ser redirecionado para a porta 80 do conteiner ngnix
+    http://localhost:8080/  =  agora é possivel acessar essa porta no nginx, acessando minha porta 8080 no local host e caindo na porta 80 do nginx
+- docker run -d -p 8080:80 nginx  =  Para rodar em plano de fundo e deixa o terminal livre para uso, sempre cria uma nova imagem, container
+
+
+- docker stop <id>  =  para parar o container
+- docker rm <id>  =  Remove o container
+- docker rm -f nginx  =  destroi o container
+- docker run --name=nginx -d -p 8080:80 nginx  =  coloca um nome no container
+
+- docker exec nginx ls  =  Exucutando comando dentro do container 
+- docker exec -it nginx bash  =  Entra de forma interativa no container, esta dentro da imagem do nginx
+
+
+- CTRL + D  =  volta pra maquina
+
+- docker rmi nginx  =  mata a imagem do nginx, vai ter que baixar novamente caso queira rodar    
+-
+-
+
